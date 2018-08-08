@@ -1,6 +1,6 @@
 ##### [网站链接](119.23.35.81)
 ##### 业务逻辑
-* 前端JSP（HTML主体）＋SpringMVC+SpringJDNC
+* 前端JSP（HTML主体）＋SpringMVC+SpringJDBC
 
 ##### 基本业务
 * 在线观看视频
