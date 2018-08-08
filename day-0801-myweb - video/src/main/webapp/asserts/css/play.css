@@ -1,0 +1,48 @@
+*{ margin:0; padding:0; list-style:none;}
+body { 
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 12px; 
+  line-height: 20px;
+ background:#242645;
+}
+a{TEXT-DECORATION: none}
+a:hover{TEXT-DECORATION: underline}
+#header{margin:0 auto; padding-top:5px;padding-bottom:5px; background:#000; }
+#header .logo{float:left;width:130px;height:50px;background:url(ck-logo-s.gif) no-repeat}
+#header .menu{width:890px;height:50px;margin:0 auto;font-size:14px;}
+#header .menu ul{float:left;height:50px;}
+#header .menu ul li{float:left;margin-top:8px;height:30px;text-align:center;}
+#header .menu ul li a{float:left;padding:2px 20px 0 20px;height:30px;line-height:30px;color:#ccc;}
+#header .menu ul li a:hover{background:#eee;color:#00698C;TEXT-DECORATION: none}
+#header .menu .on{margin-top:15px;border-right:#666 1px solid;height:20px;width:20px}
+#header p{float:left;margin-left:100px;margin-top:10px;}
+#header .menu span{float:right;margin-top:10px;margin-right:10px;width:200px;height:28px;background:url(ck-s-s.gif) no-repeat}
+DL{padding:0px 2px 2px 5px;} 
+DL DD{ width:198px;color:#666;line-height:20px;margin-top:5px;} 
+DL DD .submit{ float:left;width:30px; height:20px; border:0px;background:none} 
+DL DD .input{float:left; width:160px; height:18px; line-height:18px;color:#999;border:0px;background:none} 
+.play_1{width:600px;height:430px;MARGIN: 0px auto;BACKGROUND:#ffffff;padding:0px 10px 0px 10px}
+.play_top{width:600px;line-height:30px;BACKGROUND:#ffffff url('/images/playback.gif') no-repeat 0px 2px;text-align:right;padding-top:10px;padding-right:20px;}
+.play_bot{width:610px;BACKGROUND:#2F4056;padding:5px;FONT-FAMILY: 华文楷体;COLOR:white}
+#footer{margin:0 auto;padding-top:5px; background:#E4E4E4; }
+.play-help { MARGIN: 0 auto; width:885px;height:40px; line-height:40px; font-size:18px; color:#666; background:url(ck-pl-bg.gif) 30px 33px no-repeat;}
+.gu{MARGIN: 0 auto; width:865px;background:#ffffff;padding:5px;color:red;font-size:16px;padding-top:10px;padding-bottom:5px;}
+#main_box{
+  width:880px; 
+  margin-right:auto; 
+  margin-left:auto; 
+
+} 
+.left{ 
+  width:600px; 
+  float:left; 
+} 
+.right{ 
+  float:right;
+  width:250px;
+} 
+.mline{height:8px;clear:both;}
+.muzhi{width:860px;margin:0 auto;padding:8px;font-size:14px;background:#fff;color:red;}
+.muzhi h4{text-align:center;font-size:20px;margin-top:5px;margin-bottom:5px;}
+.c-p{width:80px;height:40px;text-align:center;font-size:14px;}
+.c-p span{float:left;width:80px;padding:2px;border-radius:3px;margin-top:10px;color:#eee;background:green;}
