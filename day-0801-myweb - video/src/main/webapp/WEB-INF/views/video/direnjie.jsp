@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link href="/asserts/css/play.css" rel="stylesheet" type="text/css">
-    <title>搜索</title>
+    <title>狄仁杰之四大天王</title>
 
 </head>
 <body style="background-color: #242645">
@@ -22,10 +22,10 @@
        pluginspage="http://www.macromedia.com/go/getflashplayer" __idm_id__="420412417">
 
 <div class="play_1">
-    <iframe width="100%" height="100%" allowfullscreen="true" allowtransparency="true" frameborder="0" scrolling="no" src="http://api.bbbbbb.me/jx/?url=http://v.qq.com/x/cover/ru0gg9oat8tph3e.html" __idm_id__="21174273"></iframe>
+    <iframe width="100%" height="100%" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" src="http://api.wjzxxx.com/yunbo/?v=b_uODaGMBvvCtHXWdmgACToOM7TXqIrBAyE3-fo_Uad50bqnH-wk8JsSrIIeji80aLUwS_6CaSI" __idm_id__="520736769"></iframe>
     <div class="play_bot" style="FONT-SIZE: 16px">
-        <b><a href="sousuo" target="_blank">搜索</a>[高清]</b>
-        <b><a href="video" target="_blank" style="float: right">返回首页</a></b>
+        <b><a href="direnjie" target="_blank">狄仁杰之四大天王</a>[DVD清晰]</b>
+        <b><a href="" target="_blank" style="float: right">返回首页</a></b>
     </div>
 </div>
 </body>

@@ -17,6 +17,6 @@ public class TestController {
     @RequestMapping(value = {"test"}, method = {RequestMethod.GET})
     public String test(HttpSession session) {
          session.setAttribute("current_user","Test");
-        return "video";
+        return "/WEB-INF/views/home/video";
     }
 }

@@ -1,19 +1,12 @@
 package club.logicr.myweb.control;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * 检测是否登录，没有登录则跳转登录界面，
@@ -34,10 +27,10 @@ public class PlayFilterController {
         ModelAndView modelAndView = new ModelAndView();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("xihongshi");
+            modelAndView.setViewName("/WEB-INF/views/video/xihongshi");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }
@@ -47,10 +40,10 @@ public class PlayFilterController {
         ModelAndView modelAndView = new ModelAndView();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("direnjie");
+            modelAndView.setViewName("/WEB-INF/views/video/direnjie");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }
@@ -60,10 +53,10 @@ public class PlayFilterController {
         ModelAndView modelAndView = new ModelAndView();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("sousuo");
+            modelAndView.setViewName("/WEB-INF/views/video/sousuo");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }
@@ -74,10 +67,10 @@ public class PlayFilterController {
         HttpSession session = request.getSession();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("dongwushijie");
+            modelAndView.setViewName("/WEB-INF/views/video/dongwushijie");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }
@@ -87,10 +80,10 @@ public class PlayFilterController {
         HttpSession session = request.getSession();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("xie");
+            modelAndView.setViewName("/WEB-INF/views/video/xie");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }
@@ -101,10 +94,10 @@ public class PlayFilterController {
         HttpSession session = request.getSession();
         Object account = session.getAttribute("current_user");
         if (null != account) {
-            modelAndView.setViewName("fuchouzhe3");
+            modelAndView.setViewName("/WEB-INF/views/video/fuchouzhe3");
             return modelAndView;
         } else {
-            modelAndView.setViewName("login");
+            modelAndView.setViewName("/WEB-INF/views/userservice/login");
             return modelAndView;
         }
     }

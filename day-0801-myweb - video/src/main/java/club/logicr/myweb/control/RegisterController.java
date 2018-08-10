@@ -25,7 +25,7 @@ public class RegisterController {
 
     @RequestMapping(value = {"/register"}, method = {RequestMethod.GET})
     public  String register() {
-        return "register";
+        return "/WEB-INF/views/userservice/register";
     }
     /*业务逻辑：将传入的帐号和密码存入到数据库中*/
     @RequestMapping(value = {"/register"}, method = {RequestMethod.POST})
@@ -51,19 +51,24 @@ public class RegisterController {
             modelAndView.addObject("error", "用户名或密码为空");
         } else if (userService.exist(user)) {
 //            用户名检测 存在于不存在
-            modelAndView.addObject("error","该用户已存在");
+            modelAndView.addObject("error", "该用户已存在");
 
-        } else if (!password .equals(repassword) ) {
-            modelAndView.addObject("error","两次密码不一致");
+        } else if (!password.equals(repassword)) {
+            modelAndView.addObject("error", "两次密码不一致");
 
-        } else if (userService.register(user)) {
+        } else if (password.length() < 6 ) {
+            modelAndView.addObject("error","密码不能少于6位");
+        }else if (password.length() < 16 ) {
+            modelAndView.addObject("error", "密码长度不能超过16位");
+        }
+        else if (userService.register(user)) {
             session.setAttribute("current_user", username);
-            modelAndView.setViewName("video");
+            modelAndView.setViewName("/WEB-INF/views/home/video");
             return modelAndView;
         } else {
             modelAndView.addObject("error", "输入有误");
         }
-        modelAndView.setViewName("register");
+        modelAndView.setViewName("/WEB-INF/views/userservice/register");
         return modelAndView;
     }
 

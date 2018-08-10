@@ -44,7 +44,7 @@
     </iframe>
     <div class="play_bot" style="FONT-SIZE: 16px">
         <b><a href="xie" target="_blank">邪不压正</a>[TC国语无字]</b>
-        <b><a href="video" target="_blank" style="float: right">返回首页</a></b>
+        <b><a href="" target="_blank" style="float: right">返回首页</a></b>
     </div>
 </div>
 </body>

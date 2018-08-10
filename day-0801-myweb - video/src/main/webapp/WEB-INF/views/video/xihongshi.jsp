@@ -25,7 +25,7 @@
 
     <div class="play_bot" style="FONT-SIZE: 16px">
         <b><a href="xihongshi" target="_blank">西虹市首富</a></b>
-        <b><a href="video" target="_blank" style="float: right">返回首页</a></b>
+        <b><a href="" target="_blank" style="float: right">返回首页</a></b>
     </div>
 </div>
 </body>

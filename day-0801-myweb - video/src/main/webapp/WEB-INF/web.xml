@@ -10,7 +10,7 @@
     <!--上下文配置-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:application-context.xml</param-value>
+        <param-value>classpath:application-context.xml,classpath:application-mail.xml</param-value>
     </context-param>
     <!--作用？连接servlet容器和spring
     跟servlet所提供的不一样

@@ -16,12 +16,12 @@
     <!--必要样式-->
     <link href="/asserts/css/styles.css" rel="stylesheet" type="text/css">
     <link href="/asserts/css/demo(1).css" rel="stylesheet" type="text/css">
-    <link href="asserts/css/loaders.css" rel="stylesheet" type="text/css">
-    <script src="asserts/js/jquery-2.1.1.min.js"></script>
+    <link href="../../../asserts/css/loaders.css" rel="stylesheet" type="text/css">
+    <script src="../../../asserts/js/jquery-2.1.1.min.js"></script>
 
     <style type="text/css">
         .tb960x90 {display:none!important;display:none}</style>
-    <link id="layuicss-skinlayercss" rel="stylesheet" href="asserts/css/layer.css" media="all"><link rel="stylesheet" href="asserts/css/layer(1).css" id="layui_layer_skinlayercss"><link type="text/css" rel="stylesheet" href="asserts/css/layer.min.css"></head>
+    <link id="layuicss-skinlayercss" rel="stylesheet" href="../../../asserts/css/layer.css" media="all"><link rel="stylesheet" href="../../../asserts/css/layer(1).css" id="layui_layer_skinlayercss"><link type="text/css" rel="stylesheet" href="../../../asserts/css/layer.min.css"></head>
 <body><canvas class="pg-canvas" width="1362" height="834"></canvas>
 <div class="login">
 
@@ -35,22 +35,22 @@
             <div class="login_fields__user">
                 <div class="icon">
 
-                    <img alt="" src="asserts/img/user_icon_copy.png">
+                    <img alt="" src="../../../asserts/img/user_icon_copy.png">
                 </div>
                 <input name="username" placeholder="用户名" maxlength="16" class="username" type="text" autocomplete="off"
                        value="">
                 <div class="validation">
-                    <img alt="" src="asserts/img/tick.png">
+                    <img alt="" src="../../../asserts/img/tick.png">
                 </div>
             </div>
             <div class="login_fields__password">
                 <div class="icon">
-                    <img alt="" src="asserts/css/lock_icon_copy.png">
+                    <img alt="" src="../../../asserts/css/lock_icon_copy.png">
                 </div>
                 <input name="password" ty class="passwordNumber" placeholder="密码" maxlength="16" type="password"
                        autocomplete="off">
                 <div class="validation">
-                    <img alt="" src="asserts/img/tick.png">
+                    <img alt="" src="../../../asserts/img/tick.png">
                 </div>
             </div>
             <div class="login_fields__password">
@@ -82,15 +82,15 @@
     </div>
 </div>
 <div class="OverWindows"></div>
-<link href="asserts/css/layui.css" rel="stylesheet" type="text/css">
+<link href="../../../asserts/css/layui.css" rel="stylesheet" type="text/css">
 <!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
-<script type="text/javascript" src="asserts/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="asserts/js/stopExecutionOnTimeout.js"></script>
-<script src="asserts/js/layui.js" type="text/javascript"></script>
-<script src="asserts/js/Particleground.js" type="text/javascript"></script>
-<script src="asserts/js/Treatment.js" type="text/javascript"></script>
-<script src="asserts/js/jquery.mockjax.js" type="text/javascript"></script>
-<script src="asserts/js/controlLogin.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../../asserts/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../asserts/js/stopExecutionOnTimeout.js"></script>
+<script src="../../../asserts/js/layui.js" type="text/javascript"></script>
+<script src="../../../asserts/js/Particleground.js" type="text/javascript"></script>
+<script src="../../../asserts/js/Treatment.js" type="text/javascript"></script>
+<script src="../../../asserts/js/jquery.mockjax.js" type="text/javascript"></script>
+<script src="../../../asserts/js/controlLogin.js" type="text/javascript"></script>
 
 
 <div class="layui-layer-move"></div></body></html>

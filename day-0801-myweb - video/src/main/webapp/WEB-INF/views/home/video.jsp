@@ -15,7 +15,7 @@
  <!-- 導航tab選項 -->
 <div>
 <ul class="myul">
-    <li><a class="active" href="video">主页</a></li>
+    <li><a class="active" href="../video">主页</a></li>
     <li><a href="#news"></a></li>
     <li><a href="#news"></a></li>
     <li><a href="#news"></a></li>
@@ -38,7 +38,7 @@
             <a href="#">观影记录</a>
             <a href="test">测试免登陆（后期请删除）</a>
             <a href="logout">退出登录</a>
-            <a href="#">关于</a>
+            <a href="about">关于</a>
         </div>
     </div>
 </ul>
