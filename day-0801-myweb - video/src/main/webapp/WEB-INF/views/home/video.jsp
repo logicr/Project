@@ -38,7 +38,8 @@
             <a href="#">观影记录</a>
             <a href="test">测试免登陆（后期请删除）</a>
             <a href="logout">退出登录</a>
-            <a href="about">关于</a>
+            <a href="logout" onclick="Document:window.close()">关闭网页</a>
+            <a href="about">关于&反馈</a>
         </div>
     </div>
 </ul>

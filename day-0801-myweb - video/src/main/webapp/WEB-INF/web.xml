@@ -32,11 +32,20 @@
         <servlet-name>servlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    
+    <!--自定义错误页面-->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error/error.jsp</location>
+    </error-page>
+    <!---->
     <!--<welcome-file-list>-->
         <!--<welcome-file>index</welcome-file>-->
     <!--</welcome-file-list>-->
 
-    
+
 </web-app>
 

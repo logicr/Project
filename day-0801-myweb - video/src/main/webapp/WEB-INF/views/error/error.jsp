@@ -19,7 +19,8 @@
 	  <h1 class="header-w3ls">Error </h1>
 	  <div class="agileits-content">
 		<%--<h2><span>4</span><span>0</span><span>4</span></h2>--%>
-		<h2><span>${error}</span></h2>
+		<%--<h2><span>${error}</span></h2>--%>
+		<h2><span>404</span></h2>
 
 		</div>
 		<div class="w3layouts-right">
