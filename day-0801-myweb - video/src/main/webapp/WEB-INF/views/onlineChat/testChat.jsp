@@ -14,6 +14,7 @@
 </head>
 <body>
 <p>${msg}</p>
+
 <form action="chat" method="post">
     <input name="info" type="text">
     <input type="submit" value="submit">
