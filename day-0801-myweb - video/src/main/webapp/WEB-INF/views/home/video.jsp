@@ -21,7 +21,10 @@
     <li><a href="#news"></a></li>
     <li><a href="#news"></a></li>
 
+
+
     <div class="dropdown">
+
         <a href="#" class="dropbtn">个人中心[
             <%
                 Object user = session.getAttribute("current_user");
@@ -36,11 +39,17 @@
             <a href="userLogin">登录</a>
             <a href="register">注册</a>
             <a href="#">观影记录</a>
-            <a href="test">测试免登陆（后期请删除）</a>
+            <a href="test">测试免登录（后期请删除）</a>
             <a href="logout">退出登录</a>
-            <a href="logout" onclick="Document:window.close()">关闭网页</a>
+            <a href="logout" onclick="Document:window.close()">关闭网页（实验）</a>
             <a href="about">关于&反馈</a>
         </div>
+    </div>
+    <div style="float:right" >
+        <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf"
+               quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock"
+               align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"
+               pluginspage="http://www.macromedia.com/go/getflashplayer">
     </div>
 </ul>
 </div>

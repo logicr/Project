@@ -31,6 +31,7 @@
 	* 思路1：给用户自定义，设定提醒内容（内部使用邮件发送，...）
 * （2018.08.12）添加错误页面 已实现√
 * （2018.08.12）添加关闭当前网页功能（网页太丑，不想看了=.=）     实现：js实现 <a href="logout" onclick="Document:window.close()">关闭网页</a> 已实现√
+* （2018.08.20）添加一个非常魔性的时钟
 
 
 
@@ -54,9 +55,14 @@
 * （2018.08.10）代码正常，发送邮件：Could not connect to SMTP host: smtp.qq.com, port: 465, 原因：必须要设置  <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>已经修复√
 * （2018.08.10）关于页面没有返回按钮 已经修复√
 * （2018.08.10）提交到我邮箱信息乱码问题 已经修复√
+* （2018.08.18）有反馈说有错别字 已经修复√（项目未上传）
 
 
 ##### 知识点
 * 前端知识点 如何实现块元素并排显示成为导航栏？float
 * 如何实现下拉菜单 利用 display: none; 在根据鼠时间修改display: block;
 * 如何设置网站图标：将ico图标放到项目根目录（48X48）
+* 时钟代码 <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf"
+               quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock"
+               align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"
+               pluginspage="http://www.macromedia.com/go/getflashplayer">
