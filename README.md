@@ -1,6 +1,41 @@
 ### [网站链接](http://119.23.35.81/)
 ##### 业务逻辑
 * 前端JSP（HTML主体）＋SpringMVC+SpringJDBC
+* （2018.08.21）应该把详细的业务逻辑写出来，不然过几天就忘了。
+* （2018.08.24）搭建框架：
+	* pom.xml中添加各种相关依赖（记得改为war包，不然没有点）。
+	* 建立与Java同级的webapp目录，以及WEB-INF路径。
+	* web.xml至关重要，关联上下文，将Servlet与Spring联系的纽带，以及各种配置，导演拦截和错误页面都在这里。
+* resources文件配置：
+	* application-context.xml是Spring相关的配置，数据源啊、事务啊、扫描啊、JDBC等。
+	* application-servlet.xml是Servlet相关的配置文件，视图解析器、包扫描、启用SpringMVC注解、防过滤、定时任务也在这里。
+	* application-mail.xml 发邮件相关业务的配置，要加到web.xml的上下文里才能生效。
+* 页面：
+	* 页面通通都放到WEN-INF中，以防有人越过导演直接访问资源。
+	* 主页展示网站资源，前端真是好玩又花样多，大部分时间都花在怎么改前端页面上，虽然是jsp页面，但是也就仅仅是加了个头而已，99%都是HTML。
+* 写表现层的control：
+	* 这里包含了所有业务层的代码：需要记住几个注解：@Controller注解标注是一个类是Web控制器，其和@Component注解等价，只不过在Web层使用，其便于区分类 的作用，经常结合配置@RequestMapping注解使用。
+	* @RequestMapping是Spring Web应用程序中最常被用到的注解之一。这个注解会将 HTTP 请求映射到 MVC 和 REST 控制器的处理方法上。
+
+	* WelcomeControl：欢迎页面的控制页面，通过注解将没有指定请求（GET）的拦截过来，返回一个欢迎页面。
+	* LoginController：用户登录控制界面，这里用了@Autowired注解，自动注入，用自动注入看起来代码真是和蔼可亲...这里就要跟DAO层数据交互了，怎么交互问题交给Service来处理，只需要注入接口就好，面向接口真是好啊，另外，这里的请求有GET（要页面）/POST（提交页面），返回也可以返回页面，也可以是视图（ModelAndView），逻辑：将用户提交的密码和用户名与数据库中数据进行比较，成功添加Session。
+	* LogoutController：退出登录，简单，清除Session。
+	* RegisterController：注册功能，这里用了@RequestParam注解，使用@RequestParam注解可以将请求参数传递给请求方法，其中value是参数名，required是参数是否必须，默认 true 表示请求参数必须包含对应参数，若不存在，将抛出异常。逻辑：参数进来先做各种参数校验，密码长度啊用户名之类的，然后扔给服务层去跟DAO层做数据处理。
+	* PlayFilterController：播放控制，逻辑：进行Session检测，没有登录就不能看，想法来自于某色情网站（不充钱就不给你看，当然，充了也不给看的）；所有的视频播放的页面都在这里进行处理。
+	* TestController：测试免登陆的，逻辑：直接不做校验添加一个Session，每次调试都要登录，我自己都觉得烦。
+	* AboutController：关于和反馈的页面，将用户的信息提交之后后台通过邮件发送到我的邮箱，这里面有个坑：添加依赖可不是mail-api包而因该是sun的mail包，这可害人了，还好StackOverflow有人踩坑。逻辑：使用Spring的JavaMailSender创建对象，再用sun的MimeMessage来处理邮件发送业务。
+	* TimeTaskController：定时任务，定时给我或者指定用户发送邮件：这里使用Spring的@Scheduled注解直接帮我解决了定制执行的问题（有了Spring感觉什么都可以直接搬轮子了），这里在@Scheduled里使用的是CRON表达式，跟正则一样的；逻辑：使用@Scheduled开启定时任务，再使用之前的关于反馈的发送邮件轮子改造一下实现订阅之类的功能。
+* 服务层Service：
+	* 这里都是些DAO访问层的方法，有两个注解@Service服务层自然用它了，@Transactional进行事务管理，这两个注解都是放在实现类上的，可不是接口上的。
+* 数据访问层DAO层：
+	* 这里就和数据直接打交道了，使用了@Repository注解声明这是DAO，自动注入了JdbcTemplate使用SpringJDBC来操作sql语句，同样这里也是面向接口的。
+* 实例类entity：
+	* 用来携带用户数据，方便处理。
+
+
+
+
+
 ##### 2018.08.09 修改本文档格式：请在所有修改前加上时间，方便查阅
 ##### 基本业务
 * 在线观看视频
@@ -31,7 +66,8 @@
 	* 思路1：给用户自定义，设定提醒内容（内部使用邮件发送，...）
 * （2018.08.12）添加错误页面 已实现√
 * （2018.08.12）添加关闭当前网页功能（网页太丑，不想看了=.=）     实现：js实现 <a href="logout" onclick="Document:window.close()">关闭网页</a> 已实现√
-* （2018.08.20）添加一个非常魔性的时钟
+* （2018.08.20）添加一个非常魔性的时钟 已实现√
+* （2018.08.24）资源有点少了，改天添加点资源
 
 
 
@@ -56,13 +92,13 @@
 * （2018.08.10）关于页面没有返回按钮 已经修复√
 * （2018.08.10）提交到我邮箱信息乱码问题 已经修复√
 * （2018.08.18）有反馈说有错别字 已经修复√（项目未上传）
-
+* （2018.08.21）关闭网页好像不行，本地测试可以关闭，上传之后就嗝屁了。
 
 ##### 知识点
 * 前端知识点 如何实现块元素并排显示成为导航栏？float
 * 如何实现下拉菜单 利用 display: none; 在根据鼠时间修改display: block;
 * 如何设置网站图标：将ico图标放到项目根目录（48X48）
-* 时钟代码 <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf"
+* 时钟代码 /<embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf"
                quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock"
                align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"
-               pluginspage="http://www.macromedia.com/go/getflashplayer">
+               pluginspage="http://www.macromedia.com/go/getflashplayer"/>

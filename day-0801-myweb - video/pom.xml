@@ -39,7 +39,9 @@
             <artifactId>spring-context</artifactId>
         </dependency>
 
-        <!--邮件支持，发邮件必须加-->
+        <!--邮件支持，发邮件必须加，因为买了包在里头-->
+        <!--package org.springframework.mail.javamail;
+-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>

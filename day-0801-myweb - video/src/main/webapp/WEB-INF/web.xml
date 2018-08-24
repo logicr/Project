@@ -10,6 +10,7 @@
     <!--上下文配置-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
+        <!--看看看下面这行，文件路径可以这样连着配置-->
         <param-value>classpath:application-context.xml,classpath:application-mail.xml</param-value>
     </context-param>
     <!--作用？连接servlet容器和spring

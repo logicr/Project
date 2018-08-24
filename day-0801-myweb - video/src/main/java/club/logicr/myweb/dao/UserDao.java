@@ -8,7 +8,7 @@ import club.logicr.myweb.entity.User;
  */
 public interface UserDao {
     /**
-     * 用户注册
+     * 用户登录
      * @param user
      * @return
      */

@@ -38,16 +38,21 @@ public class TimeTaskController {
     public void setMailSender(String text) throws MessagingException {
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         mimeMessage.setRecipient(
+                /*发给谁*/
                 Message.RecipientType.TO,
 //                new InternetAddress("511553161@qq.com")
                 new InternetAddress("13314433445@163.com")
         );
+        /*谁来发*/
         mimeMessage.setFrom(
 //                new InternetAddress("13314433445@163.com")
                 new InternetAddress("511553161@qq.com")
         );
+        /*j加上时间*/
         String time = new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒").format(new Date());
+        /*邮件标题*/
         mimeMessage.setSubject("来自网站的mail");
+        /*邮件内容*/
         mimeMessage.setText(text+": "+time);
         mailSender.send(mimeMessage);
     }

@@ -11,6 +11,7 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import java.net.BindException;
 
 /**
+ * 用来弄错误页面的，不成功，在web.xml配置了错误页面
  * @author Jan on 2018/8/10.
  * @version 1.0
  */

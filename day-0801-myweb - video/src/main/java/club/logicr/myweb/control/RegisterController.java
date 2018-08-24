@@ -22,7 +22,7 @@ import java.io.UnsupportedEncodingException;
 public class RegisterController {
     @Autowired
     private UserService userService;
-
+    /*若请求注册页面，返回*/
     @RequestMapping(value = {"/register"}, method = {RequestMethod.GET})
     public  String register() {
         return "/WEB-INF/views/userservice/register";
@@ -39,6 +39,7 @@ public class RegisterController {
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
         try {
+            /*处理牛皮癣*/
             username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -46,11 +47,11 @@ public class RegisterController {
         user.setUsername(username);
         user.setPassword(password);
         /*检测编码*/
-        System.out.println(user.getUsername());
+        //System.out.println(user.getUsername());
         if (null == username || null == password ||username.length() ==0 || password.length()==0) {
             modelAndView.addObject("error", "用户名或密码为空");
         } else if (userService.exist(user)) {
-//            用户名检测 存在于不存在
+            /* 用户名检测 存在于不存在 */
             modelAndView.addObject("error", "该用户已存在");
 
         } else if (!password.equals(repassword)) {

@@ -26,6 +26,7 @@ import java.net.URLEncoder;
 import java.util.Scanner;
 
 /**
+ * 想写在线客服机器人来着，前端交互不太会，没整成。。
  * @author Jan on 2018/8/13.
  * @version 1.0
  */

@@ -9,7 +9,7 @@
     <!--  /abc   ==> /WEB-INF/views/abc.jsp -->
     <!--  /index   ==> /WEB-INF/views/about.jsp -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <!--前缀-->
+        <!--前缀，不配了，不然又得改-->
         <!--<property name="prefix" value="/WEB-INF/views/"/>-->
         <!--后缀-->
         <property name="suffix" value=".jsp"/>
@@ -20,9 +20,9 @@
 
     <!--启用注解SpringMVC-->
     <mvc:annotation-driven/>
-    <!--资源防止被过滤-->
+    <!--资源防止被过滤，防止内部静态资源被过滤掉-->
     <mvc:default-servlet-handler />
-    <!--开启定时任务Task-->
+    <!--开启定时任务Task，定时发送邮件-->
     <task:annotation-driven/>
 
 
