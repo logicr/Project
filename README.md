@@ -1,4 +1,5 @@
 ### [网站链接](http://119.23.35.81/)
+
 ##### 业务逻辑
 * 前端JSP（HTML主体）＋SpringMVC+SpringJDBC
 * （2018.08.21）应该把详细的业务逻辑写出来，不然过几天就忘了。
@@ -76,7 +77,7 @@
 
 ##### 问题&bug
 * 当前有一个问题需要修复，点击视频之后应该跳转至播放，而我写成了登录 已经修复√
-* 拦截器需要重写，之前的拦截器是让导演写的，没有使用真的拦截器	已经修复√
+	 拦截器需要重写，之前的拦截器是让导演写的，没有使用真的拦截器	已经修复√
 * （优化选项）重复代码控制：播放拦截页面有大量重复代码，如何实现代码复用？使用AOP？
 * 阻止外部直接通过名字.jsp访问播放页面：将jsp文件移动到WEB-INF中，但是又要考虑思源文件链接问题 项目重构 已经修复√
 * 注册乱码问题 解决：new String（username.getByte（”ISO-8859-1“）,"UTF-8"）;已经修复√
@@ -95,10 +96,15 @@
 * （2018.08.21）关闭网页好像不行，本地测试可以关闭，上传之后就嗝屁了。
 
 ##### 知识点
-* 前端知识点 如何实现块元素并排显示成为导航栏？float
-* 如何实现下拉菜单 利用 display: none; 在根据鼠时间修改display: block;
+* 前端知识点 如何实现块元素并排显示成为导航栏？使用浮动：float
+
+* 如何实现下拉菜单 利用 display: none; 再根据鼠标事件修改display: block;
+
 * 如何设置网站图标：将ico图标放到项目根目录（48X48）
-* 时钟代码 /<embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf"
-               quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock"
-               align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"
-               pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+
+* 时钟代码
+
+     ```html5
+     <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf" quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+     ```
+
