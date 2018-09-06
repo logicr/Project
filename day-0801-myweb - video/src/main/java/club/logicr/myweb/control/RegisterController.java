@@ -20,6 +20,8 @@ import java.io.UnsupportedEncodingException;
 @Controller
 @RequestMapping
 public class RegisterController {
+    public static final int PASS_MAX = 16;
+    public static final int PASS_MIN= 6;
     @Autowired
     private UserService userService;
     /*若请求注册页面，返回*/
@@ -41,6 +43,8 @@ public class RegisterController {
         try {
             /*处理牛皮癣*/
             username = new String(username.getBytes("ISO-8859-1"), "UTF-8");
+            password = new String(password.getBytes("ISO-8859-1"), "UTF-8");
+            repassword = new String(repassword.getBytes("ISO-8859-1"), "UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -57,9 +61,11 @@ public class RegisterController {
         } else if (!password.equals(repassword)) {
             modelAndView.addObject("error", "两次密码不一致");
 
-        } else if (password.length() < 6 ) {
+//        } else if (password.length() < 6 ) {
+        } else if (password.length() < PASS_MIN ) {
             modelAndView.addObject("error","密码不能少于6位");
-        }else if (password.length() < 16 ) {
+//        }else if (password.length() < 16 ) {
+        }else if (password.length() > PASS_MAX ) {
             modelAndView.addObject("error", "密码长度不能超过16位");
         }
         else if (userService.register(user)) {

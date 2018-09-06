@@ -77,13 +77,13 @@
 
 ##### 问题&bug
 * 当前有一个问题需要修复，点击视频之后应该跳转至播放，而我写成了登录 已经修复√
-	 拦截器需要重写，之前的拦截器是让导演写的，没有使用真的拦截器	已经修复√
+   拦截器需要重写，之前的拦截器是让导演写的，没有使用真的拦截器	已经修复√
 * （优化选项）重复代码控制：播放拦截页面有大量重复代码，如何实现代码复用？使用AOP？
 * 阻止外部直接通过名字.jsp访问播放页面：将jsp文件移动到WEB-INF中，但是又要考虑思源文件链接问题 项目重构 已经修复√
 * 注册乱码问题 解决：new String（username.getByte（”ISO-8859-1“）,"UTF-8"）;已经修复√
 * 状态显示 乱码 已经修复√
 * 手机端下拉菜单被挡住：找到原因：因为前端页面使用了多个模板，导致里面元素属性重复定义；解决：修改下拉菜单style="z-index: 9999" 遮挡层style="z-index: 1" 
-（z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。）已经修复√
+  （z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。）已经修复√
 * 如何将项目改成SpringBoot项目? 没必要
 * 异常管理，出现访问异常时不能暴露出Tomcat的错误信息 （2018.08.09）页面改好了，但是无法捕获 通过在web.xml中添加<error-page>（2018.08.12）已经修复√
 * （2018.08.10）异常管理页面不能捕获异常界面
@@ -94,6 +94,7 @@
 * （2018.08.10）提交到我邮箱信息乱码问题 已经修复√
 * （2018.08.18）有反馈说有错别字 已经修复√（项目未上传）
 * （2018.08.21）关闭网页好像不行，本地测试可以关闭，上传之后就嗝屁了。
+* （2018.09.06）反馈说用户注册有问题的，玄学啊，之前测试好好的 （确实存在逻辑问题）已经修复√
 
 ##### 知识点
 * 前端知识点 如何实现块元素并排显示成为导航栏？使用浮动：float
@@ -107,4 +108,3 @@
      ```html5
      <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.swf" quality="high" bgcolor="#ffffff" width="160" height="48.8" name="honehoneclock" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
      ```
-
